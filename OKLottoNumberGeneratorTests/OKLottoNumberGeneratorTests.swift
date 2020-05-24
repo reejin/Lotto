@@ -19,9 +19,35 @@ class OKLottoNumberGeneratorTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testLottoNumberVaildation() throws {
+        
+        func validateLottoNumber(lottoNumber: Int) -> Bool {
+            if lottoNumber >= 1 && lottoNumber <= 45 {
+                return true
+            }
+            
+            return false
+        }
+        
+        let generator = LottoNumberGenerator()
+        let lottoNumbers = generator.lottoNumbers()
+        
+        XCTAssertTrue(lottoNumbers.count == 6)
+        
+        let reducedLottoNumber = lottoNumbers.reduce(1, { (s1: Int, s2: Int) -> Int in
+            if !validateLottoNumber(lottoNumber: s1) {
+                return 0
+            }
+            
+            if !validateLottoNumber(lottoNumber: s2) {
+                return 0
+            }
+            
+            return 1
+        })
+        XCTAssertTrue(validateLottoNumber(lottoNumber: reducedLottoNumber))
+        
+        print("Lotto numbers: \(lottoNumbers)")
     }
 
     func testPerformanceExample() throws {

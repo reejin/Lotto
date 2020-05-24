@@ -15,6 +15,9 @@
 		C02E4BC124791B0700A0C0F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02E4BBF24791B0700A0C0F2 /* LaunchScreen.storyboard */; };
 		C02E4BCC24791B0700A0C0F2 /* OKLottoNumberGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E4BCB24791B0700A0C0F2 /* OKLottoNumberGeneratorTests.swift */; };
 		C02E4BD724791B0700A0C0F2 /* OKLottoNumberGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E4BD624791B0700A0C0F2 /* OKLottoNumberGeneratorUITests.swift */; };
+		C02E4BE524791BFE00A0C0F2 /* LottoNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E4BE424791BFE00A0C0F2 /* LottoNumberGenerator.swift */; };
+		C02E4BE624791C0600A0C0F2 /* LottoNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E4BE424791BFE00A0C0F2 /* LottoNumberGenerator.swift */; };
+		C02E4BE724791C0600A0C0F2 /* LottoNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E4BE424791BFE00A0C0F2 /* LottoNumberGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		C02E4BD224791B0700A0C0F2 /* OKLottoNumberGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OKLottoNumberGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02E4BD624791B0700A0C0F2 /* OKLottoNumberGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKLottoNumberGeneratorUITests.swift; sourceTree = "<group>"; };
 		C02E4BD824791B0700A0C0F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C02E4BE424791BFE00A0C0F2 /* LottoNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				C02E4BB424791B0600A0C0F2 /* AppDelegate.swift */,
 				C02E4BB624791B0600A0C0F2 /* SceneDelegate.swift */,
 				C02E4BB824791B0600A0C0F2 /* ViewController.swift */,
+				C02E4BE424791BFE00A0C0F2 /* LottoNumberGenerator.swift */,
 				C02E4BBA24791B0600A0C0F2 /* Main.storyboard */,
 				C02E4BBD24791B0700A0C0F2 /* Assets.xcassets */,
 				C02E4BBF24791B0700A0C0F2 /* LaunchScreen.storyboard */,
@@ -262,6 +267,7 @@
 				C02E4BB924791B0600A0C0F2 /* ViewController.swift in Sources */,
 				C02E4BB524791B0600A0C0F2 /* AppDelegate.swift in Sources */,
 				C02E4BB724791B0600A0C0F2 /* SceneDelegate.swift in Sources */,
+				C02E4BE524791BFE00A0C0F2 /* LottoNumberGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02E4BCC24791B0700A0C0F2 /* OKLottoNumberGeneratorTests.swift in Sources */,
+				C02E4BE624791C0600A0C0F2 /* LottoNumberGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02E4BD724791B0700A0C0F2 /* OKLottoNumberGeneratorUITests.swift in Sources */,
+				C02E4BE724791C0600A0C0F2 /* LottoNumberGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,14 +442,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = BQM5F3RQ9Q;
 				INFOPLIST_FILE = OKLottoNumberGenerator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iportfolio.OKLottoNumberGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "iPF Developer Account Wildcard Development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,14 +463,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = BQM5F3RQ9Q;
 				INFOPLIST_FILE = OKLottoNumberGenerator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iportfolio.OKLottoNumberGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "iPF Developer Account Wildcard Development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
