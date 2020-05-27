@@ -20,33 +20,10 @@ class OKLottoNumberGeneratorTests: XCTestCase {
     }
 
     func testLottoNumberVaildation() throws {
-        
-        func validateLottoNumber(lottoNumber: Int) -> Bool {
-            if lottoNumber >= 1 && lottoNumber <= 45 {
-                return true
-            }
-            
-            return false
-        }
-        
         let generator = LottoNumberGenerator()
         let lottoNumbers = generator.lottoNumbers()
-        
-        XCTAssertTrue(lottoNumbers.count == 6)
-        
-        let reducedLottoNumber = lottoNumbers.reduce(1, { (s1: Int, s2: Int) -> Int in
-            if !validateLottoNumber(lottoNumber: s1) {
-                return 0
-            }
-            
-            if !validateLottoNumber(lottoNumber: s2) {
-                return 0
-            }
-            
-            return 1
-        })
-        XCTAssertTrue(validateLottoNumber(lottoNumber: reducedLottoNumber))
-        
+        let specification = LottoNumberSpecification()
+        XCTAssertTrue(lottoNumbers.count == specification.numberOfLottoNumbers)
         print("Lotto numbers: \(lottoNumbers)")
     }
 

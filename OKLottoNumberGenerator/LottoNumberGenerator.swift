@@ -10,16 +10,12 @@ import UIKit
 
 class LottoNumberGenerator: NSObject {
     
-    private func lottoNumber() -> Int {
-        return Int(arc4random_uniform(45)) + 1;
-    }
-    
-    public func lottoNumbers() -> Array<Int> {
-        var lottoNumbers = Array<Int>()
-        for _ in 0..<6 {
-            lottoNumbers.append(lottoNumber())
+    public func lottoNumbers() -> Array<LottoNumber> {
+        let specification = LottoNumberSpecification()
+        var lottoNumbers = Array<LottoNumber>()
+        for _ in 0..<specification.numberOfLottoNumbers {
+            lottoNumbers.append(LottoNumber())
         }
-        
         return lottoNumbers
     }
     
