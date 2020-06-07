@@ -12,8 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let human = Human()
+        let markedNumbers = human.markLottoNumbers()
+        
+        let ballPicker = BallPicker()
+        let pickedBalls = ballPicker.pickBalls()
+        let bonusBall = ballPicker.pickBonusBall()
+        
+        let bank = Bank()
+        bank.checkWinningResults(withPickedBalls: pickedBalls, bonusBall: bonusBall, markedLottoNumbers: markedNumbers)
     }
-
-
 }
 
